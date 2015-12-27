@@ -80,3 +80,5 @@ Route::get('redirect', function(Request $request){
     dd(Request::get('error'). ' => '.Request::get('error_description'));
   }
 });
+
+Route::get('posts', ['as' => 'post::all', 'uses' => 'PostController@all', 'middleware' => 'oauth']);
