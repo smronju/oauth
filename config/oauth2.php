@@ -36,6 +36,11 @@ return [
             'class' => '\League\OAuth2\Server\Grant\AuthCodeGrant',
             'access_token_ttl' => 3600,
             'auth_token_ttl'   => 3600
+        ],
+        'password' => [
+            'class' => '\League\OAuth2\Server\Grant\PasswordGrant',
+            'callback' => '\App\Http\Controllers\UserController@verify',
+            'access_token_ttl' => 3600
         ]
     ],
 
