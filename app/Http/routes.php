@@ -69,10 +69,6 @@ Route::group(['middleware' => ['web']], function () {
 
 });
 
-Route::post('oauth/access_token', function() {
-    return Response::json(Authorizer::issueAccessToken());
-});
-
 Route::get('redirect', function(Request $request){
   if(Request::has('code')){
     dd('Access granted do your staff.');
